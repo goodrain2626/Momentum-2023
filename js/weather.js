@@ -27,25 +27,25 @@ function onGeoOk(position){
         const icon = document.createElement('img');
         // 이미지 파일 선택
         if (200 <= id && id < 300) {
-            icon.src = '/img/weather/200.png'
+            icon.src = './img/weather/200.png'
         };
         if (300 <= id && id < 400) {
-            icon.src = '/img/weather/300.png'
+            icon.src = './img/weather/300.png'
         };
         if (500 <= id && id < 600) {
-            icon.src = '/img/weather/500.png'
+            icon.src = './img/weather/500.png'
         };
         if (600 <= id && id < 700) {
-            icon.src = '/img/weather/600.png'
+            icon.src = './img/weather/600.png'
         };
         if (700 <= id && id < 800) {
-            icon.src = '/img/weather/700.png'
+            icon.src = './img/weather/700.png'
         };
         if (id == 800) {
-            icon.src = '/img/weather/800.png'
+            icon.src = './img/weather/800.png'
         };
         if ( 800 < id ) {
-            icon.src = '/img/weather/801.png'
+            icon.src = './img/weather/801.png'
         };
         weatherIcon.appendChild(icon);
 

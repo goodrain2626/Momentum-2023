@@ -6,7 +6,7 @@ function changeBackgroundImage(){
     const chosenImage = images[Math.floor(Math.random() * images.length)];
     console.log(chosenImage);
     
-    document.body.style.backgroundImage = `url(img/${chosenImage})`;
+    document.body.style.backgroundImage = `url(./img/${chosenImage})`;
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
 }
