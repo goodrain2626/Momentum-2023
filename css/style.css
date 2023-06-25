@@ -1,0 +1,425 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+:root {
+    --main-font: 1.5rem;
+    --main-mt: 10px;
+    --main-mb: 25px;
+}
+
+/* utility start */
+input:focus{
+    outline: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.hidden-important {
+    display: none !important;
+}
+
+.weekend,
+.red{
+    color: #FF5757;
+}
+
+.blue{
+    color: #2A7DE1;
+}
+
+.green{
+    color: #01ac34;
+}
+/* utility End */
+
+
+/* Layout Design Start */
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    font-size: var(--main-font);
+
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1600px;
+    height: 700px;
+    position: relative;
+}
+
+.top,
+.bottom{
+    width: 100%;
+}
+
+.top{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bottom{
+    height: 90%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.left,
+.middle,
+.right{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.middle{
+    width: 33%;
+    margin: 0 30px;
+}
+
+.box{
+    background-color: rgba(229, 231, 229, 0.64);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(8, 13, 71, 0.37);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 24px;
+    padding: 30px 20px;
+    margin-bottom: var(--main-mb);
+}
+
+form{
+    width: 85%;
+    padding: 0 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.4);
+    margin-bottom: var(--main-mb);
+}
+
+input{
+    width: calc(100% - 20px);
+    border: none;
+    background-color: transparent;
+    padding: 5px 20px; 
+    font-size: 20px;
+}
+/* Layout End */
+
+/* Login Start */
+.login{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 20px 20px 20px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.login form{
+    margin-top: 25px;
+    padding-left: 0;
+}
+
+.login input{
+    text-align: center;
+}
+
+/* Login End */
+
+
+/* Quote Start */
+.quote-box{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Caprasimo', cursive;
+    font-size: 2.3rem;
+    letter-spacing: 1.1px;
+    color: #FFFFFF;
+    text-shadow: 2px 3px 8px black;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.quote-box span:last-child{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+/* Quote End */
+
+
+
+/* Greeting Start */
+.greeting-box{
+    font-size: var(--main-font);
+    text-align: center; 
+}
+
+.greeting-box h1:last-child{
+    margin-top: var(--main-mt);
+    font-size: 2.3rem;
+    text-transform: capitalize;
+}
+/* Greeting End */
+
+/* Clock Start */
+.clock-box{
+    text-align: center;
+
+    font-size: var(--main-font);
+}
+
+.clock-box #clock{
+    margin-top: var(--main-mt);
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+
+/* Clock End */
+
+/* D-day Start */
+.dDay-box{
+    height: 400px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.dDay-box::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+    overflow: auto;
+    /* background-color: #aaa; or add it to the track */
+    /* display: none; */
+}
+
+.dDay-box::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+    background-clip: padding-box;
+    /* border: 2px solid transparent; */
+}
+
+/* 스크롤바 트랙 위쪽 여백 공간 주기 위해서 */
+.dDay-box > .sub-menu::-webkit-scrollbar-button:vertical:start:decrement,
+.dDay-box::-webkit-scrollbar-button:vertical:start:increment {
+    display: block;
+    height: 25px;
+}
+
+/* 만일 스크롤바 트랙 아래쪽도 여백 공간을 주고 싶다면 ... */
+.dDay-box::-webkit-scrollbar-button:vertical:end:decrement {
+    display: block;
+    width: 25px;
+}
+
+.dDay-add{
+    font-size: var(--main-font);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+}
+
+.dDay-add i:hover{
+    color: #01ac34 !important;
+}
+
+.dDay-add span{
+    margin-right: 100px;
+}
+
+#dDay-form,
+#dDay-display{
+    margin-top: 15px;
+    border-bottom: none;
+    padding: 0;
+    width: 90%;
+}
+
+#dDay-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#dDay-list input[type="text"]{
+    width: 100px;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.4);
+    margin: 0 8px;
+}
+
+#dDay-list input[type="date"]{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    width: 120px;
+}
+
+
+#dDay-name{
+    width: 120px;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.4);
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+#dDay-list .fa-check-square{
+    margin-right: 11px;
+    color: #01ac34;
+}
+
+
+#dDay-display li{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    padding-right: 0;
+    margin-bottom: 12px;
+}
+
+#dDay-display h1{
+    width: 50%;
+    font-size: 35px;
+    margin-left: 30px;
+}
+
+/* D-day End */
+
+/* To-do List Start*/
+.todo-box{
+    height: 600px;
+}
+
+.todo-box li{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.todo-box li> i{
+    border: none;
+    border-radius: 50%;
+    margin-left: var(--main-mt);
+    margin-right: 15px;
+}
+
+i:hover{
+    cursor: pointer;
+    color: #FF5757 !important;
+}
+/* To-do List End*/
+
+/* Youtube Start */
+.youtube{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container{
+    margin: 25px auto;
+    margin-bottom: 15px;
+}
+/* Youtube End */
+
+
+/* Weather Start */
+.weather{
+    height: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather-info-box{
+    display: flex;
+    align-items: center;
+
+}
+
+#weather-icon{
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+#weather-icon img{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+#weather-main{
+    display: flex;
+    align-items: center;
+}
+
+#weather-main h2{
+    font-size: 32px;
+}
+
+#weather-main h3{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+#weather-main h4{
+    font-size: 20px;
+    color:rgba(28, 28, 28, 0.4);
+}
+/* Weather End */
+
+/* Background Icon Start */
+.background-icon{
+    font-size: 28px;
+    color: #FFFFFF;
+    text-shadow: 2px 3px 8px black;
+    position: absolute;
+    bottom: -70px;
+    right: -70px;
+}
+
+.background-icon{
+    animation: bouncing 1.5s ease-in-out 0s infinite; 
+}
+
+@keyframes bouncing {
+    0%,
+    100%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+        color: #EA871E;
+    }
+}
+/* Background Icon End */
+

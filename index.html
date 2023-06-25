@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>My Momentum</title>
+</head>
+
+<body>
+    <div class="login">
+        <h1>안녕하세요 😎</h1>
+        <form id="login-form">
+            <input required maxlength="15" type="text" placeholder="이름이 무엇인가요?">
+        </form>
+    </div>
+
+
+    <div class="container">
+        <div class="top">
+            <div class="quote-box" id="quote">
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <div class="greeting-box box">
+                    <h1 id="greeting-words" class="hidden"></h1>
+                    <h1 id="greeting-name" class="hidden"></h1>
+                </div>
+                <div class="clock-box box">
+                    <h2 id="date">2023.06.24 토</h2>
+                    <h2 id="clock">00:00</h2>
+                </div>
+                <div class="dDay-box box .customized-scrollbar">
+                    <div class="dDay-add">
+                        <span class="dDay-title">디데이 계산기</span>
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <form id="dDay-form">
+                        <ul id="dDay-list"></ul>
+                    </form>
+                    <ul id="dDay-display">
+                    </ul>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="todo-box box">
+                    <form id="todo-form">
+                        <input type="text" placeholder="오늘의 업무를 적고 엔터를 눌러주세요">
+                    </form>
+                    <ul id="todo-list"></ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="youtube box">
+                    <h2>Youtube</h2>
+                    <div class="video-container">
+                        <iframe width="400" height="230" src="https://www.youtube.com/embed/g2ZeT9v7wt0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="weather box" id="weather">
+                    <h2>Today's Weather</h2>
+                    <div class="weather-info-box">
+                        <span id="weather-icon"></span>
+                        <div id="weather-main"></div>
+                    </div>
+                </div>
+                <div class="background-icon">
+                    <i class="fas fa-images"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/background.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/dDay.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="https://kit.fontawesome.com/efac6606bf.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
